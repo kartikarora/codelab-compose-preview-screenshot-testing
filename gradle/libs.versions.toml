@@ -19,6 +19,7 @@ jdkDesugar = "2.1.2"
 junit = "4.13.2"
 kotlin = "2.0.20"
 minSdk = "30"
+screenshot = "0.0.1-alpha07"
 targetSdk = "35"
 version-catalog-update = "0.8.4"
 
@@ -64,4 +65,5 @@ compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 gradle-versions = { id = "com.github.ben-manes.versions", version.ref = "gradle-versions" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+screenshot = { id = "com.android.compose.screenshot", version.ref = "screenshot"}
 version-catalog-update = { id = "nl.littlerobots.version-catalog-update", version.ref = "version-catalog-update" }
