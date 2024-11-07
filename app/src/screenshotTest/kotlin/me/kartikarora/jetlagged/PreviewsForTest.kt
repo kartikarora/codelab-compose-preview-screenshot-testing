@@ -47,7 +47,7 @@ class PreviewsForTest {
     @Composable
     @CombinedPreview
     fun JetLaggedHeaderTabsPreview() {
-        JetLaggedHeaderTabs(onTabSelected = {}, selectedTab = SleepTab.Month)
+        JetLaggedHeaderTabs(onTabSelected = {}, selectedTab = SleepTab.OneYear)
     }
 
     // Heart Rate
@@ -60,14 +60,14 @@ class PreviewsForTest {
     @Composable
     @CombinedPreview
     fun HeartRateGraphPreview() {
-        HeartRateGraph(heartRateGraphData)
+        HeartRateGraph(heartRateGraphData.subList(2, 5))
     }
 
     // Sleep
     @CombinedPreview
     @Composable
     fun SleepBarPreview() {
-        SleepBar(sleepData = sleepData.sleepDayData.first())
+        SleepBar(sleepData = sleepData.sleepDayData.last())
     }
 
     @CombinedPreview
@@ -81,17 +81,17 @@ class PreviewsForTest {
     @Composable
     fun SleepGraphCardWithHeaderPreview(
     ) {
-        SleepGraphCard(sleepState = sleepData, cardHeading = "JetLagged")
+        SleepGraphCard(sleepState = sleepData, cardHeading = "Jet Lagged")
     }
 
     // UI
     @CombinedPreview
     @Composable
     fun FadingCirclePreview() {
-        FadingCircleBackground(bubbleSize = 48.dp, color = Color.Magenta)
+        FadingCircleBackground(bubbleSize = 48.dp, color = Color.Green)
     }
 }
 
 class HeaderPreviewDataProvider : PreviewParameterProvider<String> {
-    override val values: Sequence<String> = sequenceOf("JetLagged", "Sleep", "Home")
+    override val values: Sequence<String> = sequenceOf("JetLagged", "Sleep", "Away")
 }
